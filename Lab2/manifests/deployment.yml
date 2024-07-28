@@ -2,22 +2,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: 
-  namespace: 
+  name: mydeployment
+  namespace: dev
   labels:
-    app: 
+    app: mywebapp
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
-      app: 
-      tier: 
+      app: mywebapp
+      tier: frontend
 #pod tempalte
   template:
     metadata:
       labels:
-        app: 
-        tier: 
+        app: mywebapp
+        tier: frontend
     spec: # Pod spec
       containers:
       - name: mycontainer
